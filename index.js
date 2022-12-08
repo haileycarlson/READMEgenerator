@@ -1,16 +1,29 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-// TODO: Create an array of questions for user input
-//const questions = []
+// Generates a colored license for the license that is chosen in the command line application
+
 const generateLicense = ((license)=> {
     let newLicense = license.split(" ").join("%20");
     return `![GitHub license](https://img.shields.io/badge/license-${newLicense}-blue.svg)`
 })
+
+// Function to generate a README page and the layout of it
+
 const generateREADME = ({ projectTitle, description, install, usageInfo, contribution, tests, license, username, email }) => {
     
   return `## ${projectTitle}
+
+  ## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage Info](#usageInfo)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
 
 ## Description
 ${description}
@@ -32,11 +45,13 @@ ${generateLicense(license)}
 
 ## Questions
 Email: ${email}
-[Github repository](github.com/${username})
+[${username}](github.com/${username})
 
 `
 
 }
+
+// Function with inquirer to generate a prompt that includes written out answers as well as a list to choose a license option. Gathers all the answers and stores them
 
 function init() {
 
@@ -88,8 +103,8 @@ function init() {
         }
     ])
     .then((answers) => {
-     // TODO: Create a function to write README file
-    //function writeToFile(log.txt, data) {}
+     // Function to write README file
+ 
         const readMePage = generateREADME(answers);
     
         fs.writeFile("README.md", readMePage, (err) =>

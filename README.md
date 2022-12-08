@@ -1,24 +1,34 @@
-## N/A
+## Cool app
+
+  ## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage Info](#usageInfo)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
 
 ## Description
-N/A
+you can do very cool things
 
 ## Installation
-N/A
+inquirer
 
 ## Usage Info
-N/A
+do what you want
 
 ## Contribution
 N/A
 
 ## Tests
-N/A
+none
 
 ## License
-![GitHub license](https://img.shields.io/badge/license-GNU%20AGPLv3-blue.svg)
+![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)
 
 ## Questions
 Email: haileyacarlson@gmail.com
-[Github repository](github.com/haileycarlson)
+[haileycarlson](github.com/haileycarlson)
 
